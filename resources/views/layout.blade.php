@@ -36,6 +36,8 @@
             <!--<a class="active"  href= <php //echo route('home')?>>Home</a> -->
             <a class="{{activarMenu('contactame')}}"  href= <?php echo route('contacto')?> >Contacto</a>
             <a class="{{request()->is('saludo/*')? 'active':''}}" href= <?php  echo route('saludo','Daniel')?> >Saludo</a>
+            <a class="{{activarMenu('contactame')}}"  href= <?php echo route('mensajes.crear')?> >Mensaje</a> 
+                                                    <!-- esta va ser la que guarde en la db -->
             <!--* representa que puedo escribir cualquier valor en el parametro-->
         </nav>
     </header>

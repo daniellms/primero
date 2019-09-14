@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Mensaje;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +12,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        Mensaje::create([
+            'nombre' => 'Natanael',
+            'email' => 'nata@gmail.com',
+            'mensaje' => 'este es un mensaje de prueba'
+        ]);
     }
 }

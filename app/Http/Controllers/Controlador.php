@@ -42,12 +42,13 @@ class Controlador extends Controller
     }               
 
     public function mensajes(Request $request){
-        //return 'Procesando el mensaje..';
-    //     if($request->has('nombre')){ // si la peticion tiene nombre no me esta andando esto
-    //         return "Si tiene nombre es " . $request->input('nombre') ;//$request->all();
-    //    }else{
-    //     return "no tiene nombre"; //$this->request->all();//
-    //   }
+        //return $request->all();
+        $valor = $request->input('nombre');
+        if(isset($valor)){ // si la peticion tiene nombre no me esta andando esto
+            return "Si tiene nombre es " . $request->input('nombre') ;//$request->all();
+       }else{
+        return "no tiene nombre"; //$this->request->all();//
+      }
 
     $this->validate($request,[
         'nombre'=>'required',
