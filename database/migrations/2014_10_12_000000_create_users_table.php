@@ -11,7 +11,7 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up()  //se ejecuta usando el comando php artisan migrate (crea las tablas)
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
@@ -29,7 +29,7 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down() //se ejecuta usando el comando php artisan migrate:rollback (borra las tablas)
     {
         Schema::dropIfExists('users');
     }

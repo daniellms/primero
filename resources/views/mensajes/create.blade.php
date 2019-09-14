@@ -1,9 +1,9 @@
 @extends('layout')
 @section('contenido')
-<h1> Hola desde contacto usando extends contenido de layout</h1>
+<h1> Hola desde mensajes usando extends contenido de layout</h1>
 
 <h2>Escribeme</h2>
-    <form method="POST" action="contacto">
+    <form method="POST" action="{{route('mensajes.store')}}">
     @csrf <!-- token formulario valido -->
      
     <label for="nombre">  

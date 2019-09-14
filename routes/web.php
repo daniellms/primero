@@ -18,12 +18,29 @@ Route::get('/', function () {
 */
 
 
-Route::get('/' ,['as'=>'home','uses'=>'Controlador@home' ]);
-    
+Route::get('/', [
+    'uses'=>'Controlador@home',
+    'as'=>'home',
+]);
 
+Route::get('contactame', [
+    'uses' => 'Controlador@contactos',
+    'as' => 'contacto',
+]);
+Route::get('saludo/{nombre?}', [
+    'uses' => 'Controlador@saludovista',
+    'as' => 'saludo',
+])->where('nombre',"[A-Za-z]+"); // donde solo se admitan letras mayus y minus
 
-
-Route::get('contactame',['as'=>'contacto','uses'=>'Controlador@contactos' ]);
-Route::get('saludo/{nombre?}',['as'=>'saludo','uses'=>'Controlador@saludovista'])->where('nombre',"[A-Za-z]+"); // donde solo se admitan letras mayus y minus
 Route::post('contacto' ,'Controlador@mensajes') ;
+
+Route::get('mensajes/crear',[
+    'uses' => 'ControladorMensaje@create',
+    'as' => 'mensajes.crear'
+]);
+Route::post('mensajes',[
+    'uses' => 'ControladorMensaje@store',
+    'as' => 'mensajes.store'
+]);
+
 
