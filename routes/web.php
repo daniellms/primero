@@ -24,6 +24,6 @@ Route::get('/' ,['as'=>'home','uses'=>'Controlador@home' ]);
 
 
 Route::get('contactame',['as'=>'contacto','uses'=>'Controlador@contactos' ]);
-Route::get('saludo/{nombre?}',['as'=>'saludo','uses'=>'Controlador@saludovista'])->where('nombre',"[A-Za-z]+"); // donde solo se admitan letras mayus y minus
+Route::get('saludo/{nombre?}',['as'=>'saludo','uses'=>'Controlador@saludovista']); // donde solo se admitan letras mayus y minus
 Route::post('contacto' ,'Controlador@mensajes') ;
 
