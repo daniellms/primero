@@ -1745,7 +1745,7 @@ pre code {
 .table-info > td {
   background-color: #d6e9f9;
 }
-                                                              /* tablas */
+
 .table-info th,
 .table-info td,
 .table-info thead th,
@@ -5166,7 +5166,7 @@ a.badge-primary.focus {
   color: #fff;
   background-color: #6c757d;
 }
-                                                             /* links */
+
 a.badge-secondary:hover,
 a.badge-secondary:focus {
   color: #fff;
@@ -5327,7 +5327,7 @@ a.badge-dark.focus {
   padding: 0.75rem 1.25rem;
   color: inherit;
 }
-                                                              /* divs */
+
 .alert-primary {
   color: #1b4b72;
   background-color: #d6e9f8;
@@ -10651,7 +10651,7 @@ a.text-dark:focus {
 .active {
   /*defino una clase para css*/
   text-decoration: none;
-  color: brown;
+  color: green;
 }
 
 .error {
@@ -10665,13 +10665,3 @@ nav {
   justify-content: space-around;
 }
 
-.fondoli {
-  background-color: azure;
-}
-
-footer {
-  text-align: center;
-}
-.centrado{
-  text-align: center !important;
-}

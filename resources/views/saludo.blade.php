@@ -1,6 +1,10 @@
 @extends('layout')
 @section('contenido')
-<h1>Saludos a {{$nombre}} </h1>
+@if(auth()->check())
+    <h1>Saludos a {{auth()->user()->name}} </h1>
+@else
+    <h1>Saludos a {{$nombre}} </h1>
+@endif
 <ul>
     @forelse($consolas as $consola)
     <li> {{$consola}}</li>

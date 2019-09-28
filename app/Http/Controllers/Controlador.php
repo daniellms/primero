@@ -41,22 +41,6 @@ class Controlador extends Controller
         return view('saludo',compact('nombre','ver','jscript','consolas'));
     }               
 
-    public function mensajes(Request $request){
-        //return $request->all();
-        $valor = $request->input('nombre');
-        if(isset($valor)){ // si la peticion tiene nombre no me esta andando esto
-            return "Si tiene nombre es " . $request->input('nombre') ;//$request->all();
-       }else{
-        return "no tiene nombre"; //$this->request->all();//
-      }
-
-    $this->validate($request,[
-        'nombre'=>'required',
-        'email'=>'required|email',  // el primero obliga a completar el campo,2do que sea tipo email
-        'mensaje'=>'required|min:5'
-    ]);
-    return $request->all();
-        
-    }
+   
   
 }

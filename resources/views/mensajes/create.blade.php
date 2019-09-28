@@ -8,19 +8,20 @@
      
     <label for="nombre">  
         Nombre
-        <input type="text" name="nombre" value="{{old('nombre')}}"> <!--campo--> <!--old hace q no borre el nombre una ve q el form rechaza campos en blancos-->
+        <input class="form-control" type="text" name="nombre" value="{{old('nombre')}}"> <!--campo--> <!--old hace q no borre el nombre una ve q el form rechaza campos en blancos-->
         {!!$errors->first('nombre','<span class=error>:message</span>')!!} <!--validacion de form con el metodo mensajes de controlador-->
     </label><br>
     <label for="email">
         Email
-        <input type="text" name="email" value="{{old('email')}}">
+        <input class="form-control" type="text" name="email" value="{{old('email')}}">
         {!!$errors->first('email','<span class=error>:message</span>')!!}
     </label><br>
     <label for="mensaje">
         Mensaje
-        <textarea name="mensaje"> {{old('mensaje')}} </textarea>
+        <textarea class="form-control" name="mensaje"> {{old('mensaje')}} </textarea>
         {!!$errors->first('mensaje','<span class=error>:message</span>')!!}
     </label><br>
-    <input type="submit" value="Enviar">
+    <input type="submit" class="btn btn-primary" value="Enviar">
+
     </form>
 @stop
